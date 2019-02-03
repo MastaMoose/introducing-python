@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+from bottle import route, run
+@route('/')
+def home():
+    return "It isn't fancy, but it's my homepage"
+
+run(host = "localhost", port = 9999)
