@@ -6,8 +6,8 @@ context = zmq.Context()
 server = context.socket(zmq.REP)
 server.bind("tcp://%s:%s" % (host, port))
 while True:
-    # wait for next request from client
-    request_bytes = server.revc()
+    #  Wait for next request from client
+    request_bytes = server.recv()
     request_str = request_bytes.decode('utf-8')
     print("That voice in my head says: %s" % request_str)
     reply_str = "Stop saying: %s" % request_str
